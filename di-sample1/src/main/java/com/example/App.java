@@ -3,8 +3,7 @@ package com.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.app.Argument;
 import com.example.app.ArgumentResolver;
@@ -34,8 +33,14 @@ import com.example.app.Calculator;
  * AppクラスにDIコンテナがインジェクションできるようになる
  */
 
-@EnableAutoConfiguration
-@ComponentScan
+/*
+ * @SpringBootApplicationアノテーションは1.2から追加されたもので、
+ * @EnableAutoConfiguration + @ComponentScan + @Configurationを1つにまとめたもの
+ */
+
+//@EnableAutoConfiguration
+//@ComponentScan
+@SpringBootApplication
 public class App implements CommandLineRunner {
 
 	/*
